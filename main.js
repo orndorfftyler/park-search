@@ -122,7 +122,7 @@ function receiveInput() {
         //console.log('limit is ' + $('#limit').val());
 
         if (stateOk) {
-            console.log($('#limit').val() + ' ' + typeof $('#limit').val());
+            //console.log($('#limit').val() + ' ' + typeof $('#limit').val());
             if ($('#limit').val() == ''){
                 limit = 50;
                 getParks(state, limit);
