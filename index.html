@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+    <link href="style.css" rel="stylesheet" >
+</head>
+
+<body>
+    <h1 class="wrapper">Test</h1>
+
+    <form class="wrapper">
+        <p>To search by state, enter in one or more 2 letter state codes separated by commas (no spaces)</p>
+        <p class="hidden error">Something is wrong, please adjust state input</p>
+        <label for="state">State:</label>
+        <input name="state" type="text" id="state" required>
+        <label for="limit">Max Results:</label>
+        <input name="limit" type="text" id="limit" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    <p id="js-error-message" class="error-message"></p>
+
+    <div class="results hidden">
+        <h2>Repo results</h2>
+        <ul class="results-list">
+        </ul>
+    </div>
+
+
+    <script 
+    src="https://code.jquery.com/jquery-3.5.1.min.js" 
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" 
+    crossorigin="anonymous">
+    </script>
+    <script src="main.js"></script>
+</body>
+</html>
