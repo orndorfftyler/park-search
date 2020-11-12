@@ -1,3 +1,5 @@
+'use strict';
+
 const baseURL = 'https://developer.nps.gov/api/v1/parks';
 
 const api_key = 'g8GhGzHgzh8jV7i1HA3SbwrR3z1g0dfjnazuHwD5';
@@ -16,7 +18,7 @@ function displayResults(responseJson) {
             $('.results-list').append(`<li class="removable"><p>${responseJson.data[i].fullName}</p>
             <p></p>
             <p>${responseJson.data[i].description}</p>
-            <a href="${responseJson.data[i].url}">${responseJson.data[i].url}</a></li>`);
+            <a href="${responseJson.data[i].url}" target="_blank">${responseJson.data[i].url}</a></li>`);
         }
     $('.results').removeClass('hidden');
     }
@@ -124,7 +126,7 @@ function receiveInput() {
         if (stateOk) {
             //console.log($('#limit').val() + ' ' + typeof $('#limit').val());
             if ($('#limit').val() == ''){
-                limit = 50;
+                limit = 10;
                 getParks(state, limit);
             } else if ($('#limit').val() >= 0) {
                 limit = $('#limit').val();
